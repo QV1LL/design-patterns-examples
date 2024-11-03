@@ -8,7 +8,7 @@ namespace AbstractFactoryImplementation
 {
     internal class ConcreateEnemy2 : IEnemy
     {
-        public override void Attack()
+        public void Attack()
         {
             Console.WriteLine("Concreate enemy 2 attack!");
         }
