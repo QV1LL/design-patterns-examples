@@ -8,6 +8,6 @@ namespace ObserverImplementation
 {
     internal interface IObserver
     {
-        public abstract void Update(List<IObserverItem> observerItems);
+        public void Update(ISubject subject);
     }
 }
