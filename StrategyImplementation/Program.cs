@@ -16,7 +16,7 @@ namespace AdventureGameArchitectureExample
             King king = new King("Arthur", new SwordBehavior());
             king.Fight();
 
-            Knight knight = new Knight("Brave knight", new BowBehavior());
+            Knight knight = new Knight("Knight", new BowBehavior());
             knight.Fight();
         }
     }

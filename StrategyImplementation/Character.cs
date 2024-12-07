@@ -8,10 +8,17 @@ namespace AdventureGameArchitectureExample
 {
     internal abstract class Character
     {
-        public string _name;
+        private readonly string _name;
+        public string Name
+        {
+            get
+            {
+                return this._name;
+            }
+        }
         protected IWeaponBehavior _weaponBehavior;
 
-        public Character(string name, IWeaponBehavior weaponBehavior) {
+        protected Character(string name, IWeaponBehavior weaponBehavior) {
             this._weaponBehavior = weaponBehavior;
             this._name = name;
         }
@@ -20,5 +27,7 @@ namespace AdventureGameArchitectureExample
         {
             this._weaponBehavior = weaponBehavior;
         }
+
+        public abstract void Fight();
     }
 }

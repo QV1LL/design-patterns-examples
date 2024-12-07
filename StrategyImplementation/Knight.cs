@@ -13,7 +13,7 @@ namespace AdventureGameArchitectureExample
             
         }
 
-        public void Fight()
+        public override void Fight()
         {
             _weaponBehavior.UseWeapon(this);
         }

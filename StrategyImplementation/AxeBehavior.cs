@@ -10,7 +10,7 @@ namespace AdventureGameArchitectureExample
     {
         public void UseWeapon(Character character)
         {
-            Console.WriteLine(character._name + " fights using axe!");
+            Console.WriteLine(character.Name + " fights using axe!");
         }
     }
 }
