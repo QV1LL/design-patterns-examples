@@ -8,50 +8,50 @@ namespace BuilderImplementation
 {
     internal class CarBuilder : ICarBuilder
     {
-        private Car _product;
+        private int _power = 100;
+        private int _weight = 1000;
+        private float _engineVolume = 1.4f;
+
+        private GearboxType _gearType = GearboxType.MANUAL;
+        private TyreTypes _tyreType = TyreTypes.CASUAL;
 
         public CarBuilder ()
         {
-            _product = new Car();
+
         }
 
         public Car Create()
         {
-            Car buildedCar = this._product;
-
-            this.Reset();
-
-            return buildedCar;
-        }
-
-        private void Reset()
-        {
-            this._product = new Car();
+            return new Car(this._power,
+                this._weight,
+                this._engineVolume,
+                this._gearType,
+                this._tyreType);
         }
 
         public void SetPower(int power)
         {
-            this._product.Power = power;
+            this._power = power;
         }
 
         public void SetWeight(int weight)
         {
-            this._product.Weight = weight;
+            this._weight = weight;
         }
 
         public void SetEngineVolume(float engineVolume)
         {
-            this._product.EngineVolume = engineVolume;
+            this._engineVolume = engineVolume;
         }
 
         public void SetGearboxType(GearboxType gearboxType)
         {
-            this._product.GearType = gearboxType;
+            this._gearType = gearboxType;
         }
 
         public void SetTyreTypes(TyreTypes tyreTypes)
         {
-            this._product.TyreType = tyreTypes;
+            this._tyreType = tyreTypes;
         }
     }
 }

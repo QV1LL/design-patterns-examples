@@ -9,7 +9,7 @@ namespace BuilderImplementation
             CarBuilder builder = new CarBuilder();
             CarBuildDirector carBuildDirector = new CarBuildDirector(builder);
 
-            carBuildDirector.BuildCasualCar();
+            carBuildDirector.BuildOffroadCar();
 
             Car car = builder.Create();
 

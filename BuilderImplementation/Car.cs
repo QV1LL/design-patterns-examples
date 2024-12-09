@@ -24,20 +24,29 @@ namespace BuilderImplementation
 
     internal class Car
     {
-        public int Power;
-        public int Weight;
-        public float EngineVolume;
+        private int _power;
+        private int _weight;
+        private float _engineVolume;
 
-        public GearboxType GearType;
-        public TyreTypes TyreType;
+        private GearboxType _gearType;
+        private TyreTypes _tyreType;
+
+        public Car(int power, int weight, float engineVolume, GearboxType gearType, TyreTypes tyreType)
+        {
+            this._power = power;
+            this._weight = weight;
+            this._engineVolume = engineVolume;
+            this._gearType = gearType;
+            this._tyreType = tyreType;
+        }
 
         public void PrintStataments()
         {
-            Console.WriteLine("Power: " + this.Power + "\n"
-                + "Weight: " + this.Weight + "\n"
-                + "EngineVolume: " + this.EngineVolume + "\n"
-                + "Gearbox type: " + this.GearType + "\n"
-                + "Tyre type: " + this.TyreType + "\n");
+            Console.WriteLine("Power: " + this._power + "\n"
+                + "Weight: " + this._weight + "\n"
+                + "EngineVolume: " + this._engineVolume + "\n"
+                + "Gearbox type: " + this._gearType + "\n"
+                + "Tyre type: " + this._tyreType + "\n");
         }
     }
 }

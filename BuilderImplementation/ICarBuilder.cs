@@ -11,11 +11,8 @@ namespace BuilderImplementation
         Car Create();
 
         public void SetPower(int power);
-
         public void SetWeight(int weight);
-
         public void SetEngineVolume(float engineVolume);
-
         public void SetGearboxType(GearboxType gearboxType);
         public void SetTyreTypes(TyreTypes tyreTypes);
     }
